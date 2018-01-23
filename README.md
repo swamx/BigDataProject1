@@ -10,7 +10,7 @@ A single commit has lots of information such as timestamp, owner of the repostio
 The storage solution used for storing commit is MongoDB because of the scalability and stability it offers. Apart from the same, it has been found that there is a need to convert the commit messages into SpaceVector Model before analysis. Previously, I (Devang Swami) had previsouly colaborated with my friend Chintan Raiyani to write a MapReduce code which find Tf-idf for documents after converting them to Space vector model. Interestingly MongoDB has support for the MapReduce Framework, its not so good with load balancing but still considerably good for this project which would be helpful when we wish to convert the data, since we would eradicate the need of moving the data to hadoop before analysis. Final advantage of MongoDB over other database's is the aggregation pipeline, which could be used for both data aggregation as well as for data enrichment (Especially Complex Enrichment).
 
 
-Following is an example of a single commit data operation:
+Following is an example of a single commit:
 
 {'_id': ObjectId('5a6651604166203a74c1ed7c'),
  'author': None,
